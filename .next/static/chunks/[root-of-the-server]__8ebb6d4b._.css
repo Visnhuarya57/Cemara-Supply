@@ -885,6 +885,18 @@
     gap: calc(var(--spacing) * 12);
   }
 
+  :where(.space-y-0 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(calc(var(--spacing) * 0) * var(--tw-space-y-reverse));
+    margin-bottom: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
+  :where(.space-y-1 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+    margin-bottom: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+  }
+
   :where(.space-y-2 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-top: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));

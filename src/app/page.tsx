@@ -269,12 +269,12 @@ export default function Home() {
 
       {/* ======= FOOTER ======= */}
       <footer className="bg-green-950 text-gray-300">
-        <div className="max-w-6xl mx-auto px-6 py-6 grid md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto px-6 py-2 grid md:grid-cols-4 gap-8">
           <div>
             <div className="text-white font-extrabold text-xl">Cemara Supply</div>
-            <p className="text-sm mt-2">Your Culinary Business Partner</p>
+            <p className="text-sm mt-2">Trusted spice procurement with digital tracking system.</p>
              <div className="flex items-center gap-4 mt-4 text-white text-2xl">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/cemarasupply_1?igsh=MTQwNjllaDVkOG42cA==" target="_blank" rel="noopener noreferrer">
                   <FaInstagram />
                 </a>
                 <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
@@ -291,7 +291,7 @@ export default function Home() {
 
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1 text-sm">
               <li>Home</li>
               <li>About us</li>
               <li>Services</li>
@@ -301,7 +301,7 @@ export default function Home() {
 
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1 text-sm">
               <li>Community</li>
               <li>Video Tutorials</li>
               <li>API Documentation</li>
@@ -311,7 +311,7 @@ export default function Home() {
 
           <div>
             <h4 className="text-white font-semibold mb-4">Help</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-1 text-sm">
               <li>Customer Support</li>
               <li>Terms & Conditions</li>
               <li>Privacy Policy</li>
