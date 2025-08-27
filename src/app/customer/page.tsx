@@ -58,7 +58,7 @@ export default function CustomerRegister() {
           <div className="w-full max-w-sm mb-4">
             <Link
               href="/"
-              className="px-6 py-2 bg-gray-200 text-black font-semibold rounded-lg hover:bg-gray-300 transition"
+              className="px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-gray-700 transition"
             >
               Kembali
             </Link>
