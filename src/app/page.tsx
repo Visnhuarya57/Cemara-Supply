@@ -11,8 +11,8 @@ export default function Home() {
       <header className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
         <div className="text-2xl font-extrabold text-green-600">Cemara Supply</div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-700">
-          <a href="#" className="hover:text-gray-900">Product</a>
           <a href="#" className="hover:text-gray-900">About Us</a>
+          <a href="#" className="hover:text-gray-900">Product</a>
           <a href="#" className="hover:text-gray-900">Contact</a>
         </nav>
 

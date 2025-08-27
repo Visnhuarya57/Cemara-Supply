@@ -217,6 +217,7 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
@@ -891,6 +892,10 @@
     width: 320px;
   }
 
+  .w-\[420px\] {
+    width: 420px;
+  }
+
   .w-full {
     width: 100%;
   }
@@ -1214,6 +1219,10 @@
     background-color: var(--color-green-600);
   }
 
+  .bg-green-900 {
+    background-color: var(--color-green-900);
+  }
+
   .bg-green-950 {
     background-color: var(--color-green-950);
   }
@@ -1495,6 +1504,11 @@
     font-weight: var(--font-weight-extrabold);
   }
 
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
@@ -1585,6 +1599,10 @@
 
   .placeholder-black::placeholder {
     color: var(--color-black);
+  }
+
+  .placeholder-gray-400::placeholder {
+    color: var(--color-gray-400);
   }
 
   .opacity-90 {
@@ -1737,6 +1755,12 @@
   }
 
   @media (hover: hover) {
+    .hover\:opacity-90:hover {
+      opacity: .9;
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:opacity-95:hover {
       opacity: .95;
     }
@@ -1755,6 +1779,10 @@
 
   .focus\:ring-green-500:focus {
     --tw-ring-color: var(--color-green-500);
+  }
+
+  .focus\:ring-green-600:focus {
+    --tw-ring-color: var(--color-green-600);
   }
 
   .focus\:outline-none:focus {

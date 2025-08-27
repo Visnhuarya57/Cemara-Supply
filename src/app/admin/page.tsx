@@ -103,7 +103,7 @@ export default function LoginPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-green-950 px-6 py-3 text-center text-xs">
+      <footer className="bg-green-950 px-6 py-3 text-center text-xs text-gray-400">
         <span>Copyright © 2025 All Right Reserved By CemaraSupply.com &nbsp; | &nbsp; Design By Cemara</span>
       </footer>
     </div>
