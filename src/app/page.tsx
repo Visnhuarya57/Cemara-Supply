@@ -158,7 +158,7 @@ export default function Home() {
 
           {/* Card 2 */}
           <Link href="/verify" passHref>
-              <div className="cursor-pointer flex items-start gap-4 rounded-xl bg-gray-100 shadow-sm px-5 py-4 hover:bg-green-100 transition">
+              <div className="cursor-pointer flex items-start gap-4 rounded-xl bg-gray-100 shadow-sm px-5 py-4 hover:bg-green-200 transition">
                 <div className="shrink-0 w-10 h-10 rounded-lg bg-orange-200 grid place-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                       className="text-orange-700" viewBox="0 0 24 24">
@@ -203,7 +203,7 @@ export default function Home() {
           {/* Farmer */}
           <a
             href="/farmer"
-            className="rounded-2xl bg-green-600 text-white px-6 py-6 text-left shadow hover:opacity-95 transition"
+            className="rounded-2xl bg-green-600 text-white px-6 py-6 text-left shadow hover:opacity-60 transition"
           >
             <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-lg bg-white/20 grid place-items-center">🌿</span>
@@ -217,7 +217,7 @@ export default function Home() {
           {/* Customer */}
           <a
             href="/customer"
-            className="rounded-2xl bg-sky-500 text-white px-6 py-6 text-left shadow hover:opacity-95 transition"
+            className="rounded-2xl bg-sky-500 text-white px-6 py-6 text-left shadow hover:opacity-60 transition"
           >
             <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-lg bg-white/20 grid place-items-center">🛒</span>
@@ -231,7 +231,7 @@ export default function Home() {
           {/* UMKM */}
           <a
             href="/umkm"
-            className="rounded-2xl bg-fuchsia-600 text-white px-6 py-6 text-left shadow hover:opacity-95 transition"
+            className="rounded-2xl bg-fuchsia-600 text-white px-6 py-6 text-left shadow hover:opacity-60 transition"
           >
             <div className="flex items-center gap-3">
               <span className="w-9 h-9 rounded-lg bg-white/20 grid place-items-center">🏷️</span>
