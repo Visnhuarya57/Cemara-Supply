@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white text-gray-900">
+   <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white text-gray-900">
       {/* ======= NAVBAR ======= */}
       <header className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
         <div className="text-2xl font-extrabold text-green-600">Cemara Supply</div>
@@ -15,9 +15,14 @@ export default function Home() {
           <a href="#" className="hover:text-gray-900">About Us</a>
           <a href="#" className="hover:text-gray-900">Contact</a>
         </nav>
-        <button className="px-4 py-2 rounded-lg bg-green-600 text-white text-sm hover:bg-green-700">
+
+        {/* 🔗 Tombol Sign In diarahkan ke /login */}
+        <Link
+          href="/Login"
+          className="px-4 py-2 rounded-lg bg-green-600 text-white text-sm hover:bg-green-700"
+        >
           Sign In
-        </button>
+        </Link>
       </header>
 
       {/* ======= HERO ======= */}

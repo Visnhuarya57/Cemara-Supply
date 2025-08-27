@@ -1,7 +1,12 @@
 {
+  "/Login/page": "app/Login/page.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/customer/page": "app/customer/page.js",
   "/farmer/login/page": "app/farmer/login/page.js",
   "/farmer/page": "app/farmer/page.js",
+  "/farmer/register/page": "app/farmer/register/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/umkm/page": "app/umkm/page.js"
 }
