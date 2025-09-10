@@ -49,7 +49,7 @@ export default function CustomerRegister() {
       <div className="flex flex-col md:flex-row flex-grow items-center justify-center px-6">
         {/* ======= Logo di kiri ======= */}
         <div className="flex justify-center md:justify-end w-full md:w-1/2 mb-6 md:mb-0">
-          <img src="/logo-sidera.png" alt="SIDERA Logo" className="w-64 h-64" />
+          <img src="/logo.jpeg" alt="SIDERA Logo" className="w-64 h-64" />
         </div>
 
         {/* ======= Form di kanan ======= */}
@@ -188,7 +188,7 @@ export default function CustomerRegister() {
           <div className="text-center text-sm mt-6 border-t pt-4 w-full max-w-sm">
             <p>
               Sudah punya akun?{" "}
-              <Link href="/Login" className="text-orange-600 hover:underline">
+              <Link href="/umkm/login" className="text-orange-600 hover:underline">
                 Login
               </Link>
             </p>

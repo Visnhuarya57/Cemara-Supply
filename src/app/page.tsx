@@ -45,9 +45,15 @@ export default function Home() {
             <div className="absolute inset-6 rounded-full border-[20px] border-sky-100/70" />
             <div className="absolute inset-16 rounded-full border-[20px] border-sky-100/60" />
             <div className="absolute inset-24 rounded-full border-[20px] border-sky-100/50" />
+            {/* image (paling depan) */}
+            <img
+              src="/logo.jpeg" // letakkan file.jpeg di folder public
+              alt="logo Produk"
+              className="absolute inset-0 w-full h-full object-cover rounded-full z-10"
+            />
             {/* dots */}
-            <span className="absolute -top-2 right-8 w-4 h-4 rounded-full bg-orange-400" />
-            <span className="absolute bottom-4 right-0 w-6 h-6 rounded-full bg-sky-300" />
+            <span className="absolute -top-2 right-8 w-4 h-4 rounded-full bg-green-400" />
+            <span className="absolute bottom-4 right-0 w-6 h-6 rounded-full bg-yellow-300" />
             <span className="absolute top-16 left-6 w-10 h-10 rounded-full bg-orange-200" />
           </div>
         </div>
@@ -70,29 +76,29 @@ export default function Home() {
           {/* Card template */}
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
             <div className="aspect-[4/3] bg-gray-200">
-              <img src="/about1.jpg" alt="Petani" className="w-full h-full object-cover"/>
+              <img src="/petani.jpg" alt="Petani" className="w-full h-full object-cover"/>
             </div>
             <div className="p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500">
-                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <span className="w-2 h-2 rounded-full bg-green-400" />
                 <span>Petani Terpercaya</span>
               </div>
-              <div className="mt-1 font-semibold">(Teks buat Petani)</div>
-              <div className="text-sky-600 text-sm mt-1">Rp 6.705.000 <span className="text-gray-500">/orang</span></div>
+              <div className="mt-1 font-semibold">Lebih dari 10 Petani Aktif Ikut Berpartisipasi</div>
+              {/* <div className="text-sky-600 text-sm mt-1">Rp 6.705.000 <span className="text-gray-500">/orang</span></div> */}
             </div>
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
             <div className="aspect-[4/3] bg-gray-200">
-              <img src="/about2.jpg" alt="UMKM" className="w-full h-full object-cover"/>
+              <img src="/logo.jpeg" alt="UMKM" className="w-full h-full object-cover"/>
             </div>
             <div className="p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500">
-                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <span className="w-2 h-2 rounded-full bg-yellow-400" />
                 <span>Pemberdayaan UMKM</span>
               </div>
-              <div className="mt-1 font-semibold">(Teks buat UMKM)</div>
-              <div className="text-gray-600 text-sm mt-1">Rp 1.205.000 </div>
+              <div className="mt-1 font-semibold">Proses Olahan Bahan Yang Canggih</div>
+              {/* <div className="text-gray-600 text-sm mt-1">Rp 1.205.000 </div> */}
             </div>
           </div>
 
@@ -102,25 +108,25 @@ export default function Home() {
             </div>
             <div className="p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500">
-                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <span className="w-2 h-2 rounded-full bg-green-400" />
                 <span>Customer</span>
               </div>
-              <div className="mt-1 font-semibold">(Teks Buat Customer)</div>
-              <div className="text-sky-600 text-sm mt-1">Rp 605.000 </div>
+              <div className="mt-1 font-semibold">Kepercayaan Mereka terhadap Produk Adalah Tugas Kami</div>
+              {/* <div className="text-sky-600 text-sm mt-1">Rp 605.000 </div> */}
             </div>
           </div>
 
           <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
             <div className="aspect-[4/3] bg-gray-200">
-              <img src="/about4.jpg" alt="QR Code" className="w-full h-full object-cover"/>
+              <img src="/qrr.jpg" alt="QR Code" className="w-full h-full object-cover"/>
             </div>
             <div className="p-4">
               <div className="flex items-center gap-2 text-xs text-gray-500">
-                <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <span className="w-2 h-2 rounded-full bg-yellow-400" />
                 <span>QR Code</span>
               </div>
-              <div className="mt-1 font-semibold">(Teks Buat QR Code)</div>
-              <div className="text-sky-600 text-sm mt-1">Rp 1.400.000 </div>
+              <div className="mt-1 font-semibold">Periksa Keaslian Produk Kami</div>
+              {/* <div className="text-sky-600 text-sm mt-1">Rp 1.400.000 </div> */}
             </div>
           </div>
         </div>
@@ -133,7 +139,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-2">Why Choose Us</h2>
           <p className="text-gray-600">
             Enjoy different experiences in every place you visit and discover new and affordable
-            adventures of course.
+            Spices of course.
           </p>
         </div>
 

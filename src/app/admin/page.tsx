@@ -27,7 +27,7 @@ export default function LoginPage() {
 
           {/* Logo */}
           <div className="mb-6 flex justify-center">
-            <img src="/logo.png" alt="Logo" className="w-32 h-32" />
+            <img src="/logo.jpeg" alt="Logo" className="w-32 h-32" />
           </div>
 
           {/* Form */}
