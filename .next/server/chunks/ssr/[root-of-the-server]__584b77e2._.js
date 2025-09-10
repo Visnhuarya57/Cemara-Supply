@@ -41,12 +41,14 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)"); // ✅ pakai next/image
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye.js [app-ssr] (ecmascript) <export default as Eye>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2d$off$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__EyeOff$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye-off.js [app-ssr] (ecmascript) <export default as EyeOff>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user.js [app-ssr] (ecmascript) <export default as User>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$key$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Key$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/key.js [app-ssr] (ecmascript) <export default as Key>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/map-pin.js [app-ssr] (ecmascript) <export default as MapPin>");
 "use client";
+;
 ;
 ;
 ;
@@ -65,7 +67,7 @@ function FarmerRegister() {
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const fetchCities = async ()=>{
             try {
-                const res = await fetch("https://api.example.com/cities"); // ganti endpoint dengan punya kamu
+                const res = await fetch("https://api.example.com/cities"); // ganti endpoint sesuai API
                 const data = await res.json();
                 setCities(data.map((city)=>city.name));
             } catch (error) {
@@ -94,18 +96,27 @@ function FarmerRegister() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex justify-center md:justify-end w-full md:w-1/2 mb-6 md:mb-0",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                            src: "/logo.jpeg",
-                            alt: "SIDERA Logo",
-                            className: "w-64 h-64"
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative w-64 h-64 rounded-full overflow-hidden border-4 border-green-600 shadow-lg",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                src: "/logo.jpeg",
+                                alt: "SIDERA Logo",
+                                fill: true,
+                                className: "object-cover",
+                                priority: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/farmer/register/page.tsx",
+                                lineNumber: 48,
+                                columnNumber: 13
+                            }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/farmer/register/page.tsx",
-                            lineNumber: 46,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                        lineNumber: 45,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -119,12 +130,12 @@ function FarmerRegister() {
                                     children: "Kembali"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                    lineNumber: 53,
+                                    lineNumber: 62,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                lineNumber: 52,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -132,7 +143,7 @@ function FarmerRegister() {
                                 children: "Daftar"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                lineNumber: 61,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -148,12 +159,12 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 70,
+                                                    lineNumber: 79,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 78,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -165,13 +176,13 @@ function FarmerRegister() {
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 81,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 68,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -183,12 +194,12 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 94,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 84,
+                                                lineNumber: 93,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -200,13 +211,13 @@ function FarmerRegister() {
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 96,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 92,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -218,12 +229,12 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 109,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 99,
+                                                lineNumber: 108,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -237,7 +248,7 @@ function FarmerRegister() {
                                                         children: "Pilih Lokasi Sawah"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 117,
                                                         columnNumber: 17
                                                     }, this),
                                                     cities.map((city, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -245,19 +256,19 @@ function FarmerRegister() {
                                                             children: city
                                                         }, idx, false, {
                                                             fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                            lineNumber: 110,
+                                                            lineNumber: 119,
                                                             columnNumber: 19
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 111,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 107,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -269,12 +280,12 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 120,
+                                                    lineNumber: 129,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 128,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -286,7 +297,7 @@ function FarmerRegister() {
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 122,
+                                                lineNumber: 131,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -297,24 +308,24 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 135,
+                                                    lineNumber: 144,
                                                     columnNumber: 33
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 135,
+                                                    lineNumber: 144,
                                                     columnNumber: 56
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 130,
+                                                lineNumber: 139,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 118,
+                                        lineNumber: 127,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -326,12 +337,12 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 142,
+                                                    lineNumber: 151,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 150,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -343,7 +354,7 @@ function FarmerRegister() {
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 144,
+                                                lineNumber: 153,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -354,24 +365,24 @@ function FarmerRegister() {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 168,
                                                     columnNumber: 40
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                    lineNumber: 159,
+                                                    lineNumber: 168,
                                                     columnNumber: 63
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 161,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 149,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -384,14 +395,14 @@ function FarmerRegister() {
                                                 className: "h-4 w-4 border-gray-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 174,
                                                 columnNumber: 15
                                             }, this),
                                             "Ingat akun saya!"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 173,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -400,13 +411,13 @@ function FarmerRegister() {
                                         children: "Daftar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 184,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -421,30 +432,30 @@ function FarmerRegister() {
                                             children: "Login"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/farmer/register/page.tsx",
-                                            lineNumber: 187,
+                                            lineNumber: 196,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 194,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                                lineNumber: 184,
+                                lineNumber: 193,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/farmer/register/page.tsx",
-                        lineNumber: 50,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -453,18 +464,18 @@ function FarmerRegister() {
                     children: "Copyright © 2025 All Right Reserved By CemaraSupply.com   |   Design By Cemara"
                 }, void 0, false, {
                     fileName: "[project]/src/app/farmer/register/page.tsx",
-                    lineNumber: 197,
+                    lineNumber: 209,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/farmer/register/page.tsx",
-                lineNumber: 196,
+                lineNumber: 208,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/farmer/register/page.tsx",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 5
     }, this);
 }

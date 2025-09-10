@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image"; // ✅ pakai next/image
 import { Eye, EyeOff, User, Key, MapPin } from "lucide-react";
 
 export default function FarmerRegister() {
@@ -20,7 +21,7 @@ export default function FarmerRegister() {
   useEffect(() => {
     const fetchCities = async () => {
       try {
-        const res = await fetch("https://api.example.com/cities"); // ganti endpoint dengan punya kamu
+        const res = await fetch("https://api.example.com/cities"); // ganti endpoint sesuai API
         const data = await res.json();
         setCities(data.map((city: any) => city.name));
       } catch (error) {
@@ -43,7 +44,15 @@ export default function FarmerRegister() {
       <div className="flex flex-col md:flex-row flex-grow items-center justify-center px-6">
         {/* ======= Logo di kiri ======= */}
         <div className="flex justify-center md:justify-end w-full md:w-1/2 mb-6 md:mb-0">
-          <img src="/logo.jpeg" alt="SIDERA Logo" className="w-64 h-64" />
+          <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-green-600 shadow-lg">
+            <Image
+              src="/logo.jpeg"
+              alt="SIDERA Logo"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
         {/* ======= Form di kanan ======= */}
@@ -184,7 +193,10 @@ export default function FarmerRegister() {
           <div className="text-center text-sm mt-6 border-t pt-4 w-full max-w-sm">
             <p>
               Sudah punya akun?{" "}
-              <Link href="/farmer/login" className="text-orange-600 hover:underline">
+              <Link
+                href="/farmer/login"
+                className="text-orange-600 hover:underline"
+              >
                 Login
               </Link>
             </p>

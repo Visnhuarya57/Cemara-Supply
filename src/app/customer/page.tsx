@@ -49,8 +49,13 @@ export default function CustomerRegister() {
       <div className="flex flex-col md:flex-row flex-grow items-center justify-center px-6">
         {/* ======= Logo di kiri ======= */}
         <div className="flex justify-center md:justify-end w-full md:w-1/2 mb-6 md:mb-0">
-          <img src="/logo.jpeg" alt="SIDERA Logo" className="w-64 h-64" />
+            <img
+                src="/logo.jpeg"
+                alt="SIDERA Logo"
+                className="w-64 h-64 rounded-full object-cover"
+            />
         </div>
+
 
         {/* ======= Form di kanan ======= */}
         <div className="w-full md:w-1/2 flex flex-col items-center">

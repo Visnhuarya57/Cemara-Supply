@@ -42,9 +42,14 @@ export default function LoginPage() {
             </button>
           </div>
 
-          <div className="mb-6 flex justify-center">
-            <img src="/logo.jpeg" alt="Logo" className="w-32 h-32" />
-          </div>
+          <div className="flex justify-center w-full mb-6">
+            <img
+                src="/logo.jpeg"
+                alt="SIDERA Logo"
+                className="w-32 h-32 rounded-full object-cover"
+            />
+            </div>
+
 
           <div className="space-y-4">
             <div className="flex items-center border rounded-lg px-3 py-2 shadow-sm bg-white">
