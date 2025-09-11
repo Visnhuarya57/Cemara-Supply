@@ -153,13 +153,6 @@ const DetailInvoicesPage = () => {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center gap-4">
-          <Link
-            href="/admin/invoices"
-            className="flex text-black items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Kembali
-          </Link>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Detail Invoice</h1>
             <p className="text-gray-600 mt-1">{invoice.transactionNumber}</p>

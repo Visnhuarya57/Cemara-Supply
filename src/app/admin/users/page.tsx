@@ -13,9 +13,12 @@ import {
     Loader2,
     AlertCircle,
     RefreshCw,
-    Plus
+    Plus,
+    Eye,
+    Edit
 } from 'lucide-react';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 const UsersPage = () => {
     const [filters, setFilters] = useState<UserFilters>({});
@@ -80,32 +83,6 @@ const UsersPage = () => {
 
     return (
         <div className="space-y-6">
-            {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                    <h1 className="text-2xl font-bold text-gray-900">Manajemen Pengguna</h1>
-                    <p className="text-gray-600 mt-1">Kelola data pengguna sistem</p>
-                </div>
-                <div className="flex items-center gap-3">
-                    <button
-                        onClick={() => refetch()}
-                        className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
-                    >
-                        <RefreshCw className="w-4 h-4" />
-                        Refresh
-                    </button>
-                    
-                    <Link 
-                        href="/admin/users/create" 
-                        className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                    >
-                        <Plus className="w-4 h-4" />
-                        Tambah Pengguna
-                    </Link>
-                </div>  
-            </div>
-
-
             {/* Stats */}
             {data && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -141,7 +118,7 @@ const UsersPage = () => {
                                 <UserCheck className="w-5 h-5 text-blue-600" />
                             </div>
                             <div>
-                                <p className="text-sm text-gray-600">Manufakturer</p>
+                                <p className="text-sm text-gray-600">Manufacturer</p>
                                 <p className="text-xl font-bold text-gray-900">
                                     {data.data.filter(user => user.role.name === 'manufacturer').length}
                                 </p>
@@ -192,9 +169,18 @@ const UsersPage = () => {
                         >
                             <option value="">Semua Role</option>
                             <option value="farmer">Petani</option>
-                            <option value="manufacturer">Manufakturer</option>
+                            <option value="manufacturer">Manufacturer</option>
                             <option value="client">Klien</option>
                         </select>
+                    </div>
+                    <div>
+                        <Link
+                            href="/admin/users/create"
+                            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                            <Plus className="w-4 h-4" />
+                            Tambah Pengguna
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -231,6 +217,9 @@ const UsersPage = () => {
                                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                         Lokasi
                                     </th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Aksi
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
@@ -265,6 +254,20 @@ const UsersPage = () => {
                                             <div className="flex items-center text-sm text-gray-900">
                                                 <MapPin className="w-4 h-4 text-gray-400 mr-2" />
                                                 {user.city.name}
+                                            </div>
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap">
+                                            <div className="flex items-center gap-2">
+                                                <Link href={`/admin/users/${user.id}`}>
+                                                    <Button variant="ghost" size="sm">
+                                                        <Eye className="w-4 h-4" />
+                                                    </Button>
+                                                </Link>
+                                                <Link href={`/admin/users/${user.id}/edit`}>
+                                                    <Button variant="ghost" size="sm">
+                                                        <Edit className="w-4 h-4" />
+                                                    </Button>
+                                                </Link>
                                             </div>
                                         </td>
                                     </tr>

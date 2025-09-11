@@ -20,23 +20,23 @@ import {
 } from 'lucide-react';
 
 const InvoicesPage = () => {
-  const [filters, setFilters] = useState<InvoiceFilters>({});
-  const [searchTerm, setSearchTerm] = useState('');
-  const [downloadingId, setDownloadingId] = useState<number | null>(null);
-  
-  const { data, isLoading, error, refetch } = useAdminGetInvoices(filters);
+    const [filters, setFilters] = useState<InvoiceFilters>({});
+    const [searchTerm, setSearchTerm] = useState('');
+    const [downloadingId, setDownloadingId] = useState<number | null>(null);
 
-  const handleDownloadPDF = async (invoiceId: number, transactionNumber: string) => {
-    try {
-      setDownloadingId(invoiceId);
-      await downloadInvoice(invoiceId, transactionNumber);
-    } catch (error) {
-      console.error('Failed to download PDF:', error);
-      alert('Gagal mengunduh PDF. Silakan coba lagi.');
-    } finally {
-      setDownloadingId(null);
-    }
-  };    const handleSearch = (value: string) => {
+    const { data, isLoading, error, refetch } = useAdminGetInvoices(filters);
+
+    const handleDownloadPDF = async (invoiceId: number, transactionNumber: string) => {
+        try {
+            setDownloadingId(invoiceId);
+            await downloadInvoice(invoiceId, transactionNumber);
+        } catch (error) {
+            console.error('Failed to download PDF:', error);
+            alert('Gagal mengunduh PDF. Silakan coba lagi.');
+        } finally {
+            setDownloadingId(null);
+        }
+    }; const handleSearch = (value: string) => {
         setSearchTerm(value);
         setFilters(prev => ({ ...prev, search: value }));
     };
@@ -95,24 +95,6 @@ const InvoicesPage = () => {
 
     return (
         <div className="space-y-6">
-            {/* Header */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                    <h1 className="text-2xl font-bold text-gray-900">Manajemen Invoice</h1>
-                    <p className="text-gray-600 mt-1">Kelola data invoice dan transaksi</p>
-                </div>
-
-                <div className="flex items-center gap-3">
-                    <Link
-                        href="/admin/invoices/create"
-                        className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                    >
-                        <Plus className="w-4 h-4" />
-                        Buat Invoice
-                    </Link>
-                </div>
-            </div>
-
             {/* Stats */}
             {data && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -182,7 +164,7 @@ const InvoicesPage = () => {
 
             {/* Filters */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
-                <div className="flex flex-col lg:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     {/* Search */}
                     <div className="flex-1">
                         <div className="relative">
@@ -195,6 +177,17 @@ const InvoicesPage = () => {
                                 className="w-full text-black pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             />
                         </div>
+                    </div>
+                    
+                    {/* Action Button */}
+                    <div className="flex-shrink-0">
+                        <Link
+                            href="/admin/invoices/create"
+                            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                        >
+                            <Plus className="w-4 h-4" />
+                            Buat Invoice Baru
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -213,8 +206,8 @@ const InvoicesPage = () => {
                         </div>
                     </div>
                 ) : data && data.data.length > 0 ? (
-                    <div className="overflow-x-auto">
-                        <table className="w-full">
+                    <div className="overflow-x-auto min-w-0">
+                        <table className="w-full min-w-[1000px]">
                             <thead className="bg-gray-50">
                                 <tr>
                                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -292,10 +285,10 @@ const InvoicesPage = () => {
                                                 <Link href={`/admin/invoices/${invoice.id}`} className="text-blue-600 hover:text-blue-900 p-1 rounded-lg hover:bg-blue-50 transition-colors hover:cursor-pointer">
                                                     <Eye className="w-4 h-4" />
                                                 </Link>
-                                                <button 
-                                                  onClick={() => handleDownloadPDF(invoice.id, invoice.transactionNumber)}
-                                                  disabled={downloadingId === invoice.id}
-                                                  className="text-green-600 hover:text-green-900 p-1 rounded-lg hover:bg-green-50 transition-colors hover:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                                                <button
+                                                    onClick={() => handleDownloadPDF(invoice.id, invoice.transactionNumber)}
+                                                    disabled={downloadingId === invoice.id}
+                                                    className="text-green-600 hover:text-green-900 p-1 rounded-lg hover:bg-green-50 transition-colors hover:cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                                                 >
                                                     <Download className={`w-4 h-4 ${downloadingId === invoice.id ? 'animate-spin' : ''}`} />
                                                 </button>

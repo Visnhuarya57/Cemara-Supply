@@ -1,6 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import api from "@/lib/api";
 import { ListInvoicesResponse, InvoiceFilters, InvoiceDetailResponse } from "@/types/ListInvoicesAdmin";
+import { 
+  CreateInvoicePayload, 
+  CreateInvoiceResponse, 
+  UsersListResponse, 
+  ProductsListResponse 
+} from "@/types/CreateInvoice";
 import { getAuthToken } from "@/utils/auth";
 
 // API function to get invoices
@@ -55,6 +61,46 @@ const downloadInvoicePDF = async (id: string | number): Promise<Blob> => {
   return response.data;
 };
 
+// API function to create invoice
+const createInvoice = async (invoiceData: CreateInvoicePayload): Promise<CreateInvoiceResponse> => {
+  const token = getAuthToken();
+  
+  const response = await api.post('/api/admin/invoices', invoiceData, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  
+  return response.data;
+};
+
+// API function to get users for invoice creation
+const fetchUsersForInvoice = async (): Promise<UsersListResponse> => {
+  const token = getAuthToken();
+  
+  const response = await api.get('/api/admin/users', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  
+  return response.data;
+};
+
+// API function to get products for invoice creation
+const fetchProductsForInvoice = async (): Promise<ProductsListResponse> => {
+  const token = getAuthToken();
+  
+  const response = await api.get('/api/products', {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  
+  return response.data;
+};
+
 // Hook to get invoices list
 export function useAdminGetInvoices(filters?: InvoiceFilters) {
   return useQuery({
@@ -100,4 +146,37 @@ export async function downloadInvoice(id: string | number, transactionNumber?: s
     console.error('Error downloading invoice:', error);
     throw error;
   }
+}
+
+// Hook to create invoice
+export function useAdminCreateInvoice() {
+  const queryClient = useQueryClient();
+  
+  return useMutation({
+    mutationFn: createInvoice,
+    onSuccess: () => {
+      // Invalidate and refetch invoices list
+      queryClient.invalidateQueries({ queryKey: ['admin-invoices'] });
+    },
+  });
+}
+
+// Hook to get users for invoice creation
+export function useGetUsersForInvoice() {
+  return useQuery({
+    queryKey: ['users-for-invoice'],
+    queryFn: fetchUsersForInvoice,
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    refetchOnWindowFocus: false,
+  });
+}
+
+// Hook to get products for invoice creation
+export function useGetProductsForInvoice() {
+  return useQuery({
+    queryKey: ['products-for-invoice'],
+    queryFn: fetchProductsForInvoice,
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    refetchOnWindowFocus: false,
+  });
 }
