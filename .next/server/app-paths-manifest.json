@@ -1,16 +1,12 @@
 {
-  "/Login/page": "app/Login/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/customer/dashboard/page": "app/customer/dashboard/page.js",
-  "/customer/login/page": "app/customer/login/page.js",
-  "/customer/page": "app/customer/page.js",
-  "/farmer/dashboard/page": "app/farmer/dashboard/page.js",
-  "/farmer/login/page": "app/farmer/login/page.js",
-  "/farmer/page": "app/farmer/page.js",
-  "/farmer/register/page": "app/farmer/register/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/invoices/[id]/page": "app/admin/invoices/[id]/page.js",
+  "/admin/invoices/create/page": "app/admin/invoices/create/page.js",
+  "/admin/invoices/page": "app/admin/invoices/page.js",
+  "/admin/users/create/page": "app/admin/users/create/page.js",
+  "/admin/users/page": "app/admin/users/page.js",
+  "/auth/login/admin/page": "app/auth/login/admin/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/umkm/login/page": "app/umkm/login/page.js",
-  "/umkm/page": "app/umkm/page.js",
-  "/verify/page": "app/verify/page.js"
+  "/page": "app/page.js"
 }
