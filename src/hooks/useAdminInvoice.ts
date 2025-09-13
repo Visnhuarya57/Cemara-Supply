@@ -89,10 +89,14 @@ const fetchUsersForInvoice = async (): Promise<UsersListResponse> => {
 };
 
 // API function to get products for invoice creation
-const fetchProductsForInvoice = async (): Promise<ProductsListResponse> => {
+const fetchProductsForInvoice = async (userId?: string): Promise<ProductsListResponse> => {
   const token = getAuthToken();
   
-  const response = await api.get('/api/products', {
+  const url = userId 
+    ? `/api/reference/products?userId=${userId}`
+    : '/api/reference/products';
+  
+  const response = await api.get(url, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -172,11 +176,12 @@ export function useGetUsersForInvoice() {
 }
 
 // Hook to get products for invoice creation
-export function useGetProductsForInvoice() {
+export function useGetProductsForInvoice(userId?: string) {
   return useQuery({
-    queryKey: ['products-for-invoice'],
-    queryFn: fetchProductsForInvoice,
+    queryKey: ['products-for-invoice', userId],
+    queryFn: () => fetchProductsForInvoice(userId),
     staleTime: 10 * 60 * 1000, // 10 minutes
     refetchOnWindowFocus: false,
+    enabled: !!userId, // Only fetch when userId is provided
   });
 }

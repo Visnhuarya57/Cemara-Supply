@@ -76,7 +76,7 @@ const editUser = async (userId: string, userData: EditUserPayload): Promise<Edit
 const fetchCities = async (): Promise<CitiesResponse> => {
   const token = getAuthToken();
   
-  const response = await api.get('/api/cities', {
+  const response = await api.get('/api/reference/cities', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -89,7 +89,7 @@ const fetchCities = async (): Promise<CitiesResponse> => {
 const fetchRoles = async (): Promise<RolesResponse> => {
   const token = getAuthToken();
   
-  const response = await api.get('/api/roles', {
+  const response = await api.get('/api/reference/roles', {
     headers: {
       Authorization: `Bearer ${token}`,
     },

@@ -6,7 +6,6 @@
   "/admin/invoices/page": "app/admin/invoices/page.js",
   "/admin/users/[id]/edit/page": "app/admin/users/[id]/edit/page.js",
   "/admin/users/[id]/page": "app/admin/users/[id]/page.js",
-  "/admin/users/create/page": "app/admin/users/create/page.js",
   "/admin/users/page": "app/admin/users/page.js",
   "/auth/login/admin/page": "app/auth/login/admin/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",

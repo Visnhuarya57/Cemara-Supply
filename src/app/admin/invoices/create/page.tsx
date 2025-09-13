@@ -27,9 +27,7 @@ const CreateInvoicePage = () => {
   const router = useRouter();
   
   const { data: usersData, isLoading: isUsersLoading } = useGetUsersForInvoice();
-  const { data: productsData, isLoading: isProductsLoading } = useGetProductsForInvoice();
-  const createInvoiceMutation = useAdminCreateInvoice();
-
+  
   const [formData, setFormData] = useState<CreateInvoicePayload>({
     senderUserId: '',
     receiverUserId: '',
@@ -41,13 +39,30 @@ const CreateInvoicePage = () => {
     price: 0
   });
 
+  // Get products based on selected sender user
+  const { data: productsData, isLoading: isProductsLoading } = useGetProductsForInvoice(
+    formData.senderUserId || undefined
+  );
+  
+  const createInvoiceMutation = useAdminCreateInvoice();
+
   const [errors, setErrors] = useState<InvoiceValidationErrors>({});
 
   const users = usersData?.data || [];
   const products = productsData?.data || [];
 
   const handleInputChange = (field: keyof CreateInvoicePayload, value: string | number) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => {
+      const newData = { ...prev, [field]: value };
+      
+      // Reset product selection when sender changes
+      if (field === 'senderUserId' && value !== prev.senderUserId) {
+        newData.productId = 0;
+      }
+      
+      return newData;
+    });
+    
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
@@ -240,18 +255,32 @@ const CreateInvoicePage = () => {
                 <select
                   value={formData.productId}
                   onChange={(e) => handleInputChange('productId', parseInt(e.target.value))}
-                  className={`w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                  disabled={!formData.senderUserId || isProductsLoading}
+                  className={`w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed ${
                     errors.productId ? 'border-red-500' : ''
                   }`}
                 >
-                  <option value={0}>Pilih Produk</option>
-                  {products.map((product) => (
-                    <option key={product.id} value={product.id}>
-                      {product.name} - {product.ownerName} ({product.city})
-                    </option>
-                  ))}
+                  {!formData.senderUserId ? (
+                    <option value={0}>Pilih pengirim terlebih dahulu</option>
+                  ) : isProductsLoading ? (
+                    <option value={0}>Memuat produk...</option>
+                  ) : products.length === 0 ? (
+                    <option value={0}>Tidak ada produk tersedia</option>
+                  ) : (
+                    <>
+                      <option value={0}>Pilih Produk</option>
+                      {products.map((product) => (
+                        <option key={product.id} value={product.id}>
+                          {product.name} - {product.ownerName} ({product.city})
+                        </option>
+                      ))}
+                    </>
+                  )}
                 </select>
               </div>
+              {!formData.senderUserId && (
+                <p className="text-sm text-blue-600">Pilih pengirim terlebih dahulu untuk melihat produk yang tersedia</p>
+              )}
               {errors.productId && (
                 <p className="text-sm text-red-600">{errors.productId}</p>
               )}
